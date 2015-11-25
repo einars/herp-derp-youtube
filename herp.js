@@ -1,29 +1,40 @@
 function randomDerp() {
-  
+
     this.derpOriginal = $(this).html();
-    
+
     $(this).click(function() {
       $(this).html(this.derpOriginal);
     });
-    
-    var randomLength = (Math.floor(Math.random()*20)+1);
-    var wordArray = new Array();
 
-    for(var x = 0; x < randomLength; x++) {
+    var preprocessed = this.derpOriginal
+      .replace(/<[^>]+>/g, '') // remove links etc,
+      .replace(/&nbsp;/g, ' '), // non-breaking space crap
 
-      randomBit = (Math.floor(Math.random()*2));
+      words = preprocessed.split(/([\(\).,?!:; \n]+)/), // split by punctuation
+      buf = [],
+      i;
 
-      if(randomBit == 1) {
-        wordArray[x] = 'herp';
+
+    for (i = 0; i < words.length; i++) {
+      if (i % 2 == 1) {
+        buf.push(words[i]);
       } else {
-        wordArray[x] = 'derp';
+        if (words[i] !== '\ufeff') {
+          if (words[i] === 'is' || words[i] === 'a' || words[i] === 'I' || words[i] === 'the') {
+            buf.push(words[i]);
+          } else if (words[i][0] === words[i][0].toUpperCase()) {
+            buf.push(Math.random() > 0.5 ? 'Herp' : 'Derp');
+          } else {
+            buf.push(Math.random() > 0.5 ? 'herp' : 'derp');
+          }
+        }
       }
     }
 
     // add derped class
     $(this).addClass("derped");
-    
-    return wordArray.join(' ');
+
+    return buf.join('');
 
 }
 
@@ -36,3 +47,4 @@ setInterval(function() {
   $('.Ct, .comment-text-content').not('.derped').html(randomDerp);
 }, 100);
 
+console.log('Initializing!');
