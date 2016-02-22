@@ -39,12 +39,11 @@ function randomDerp() {
 }
 
 // only select un-derped elements
-$('.Ct, .comment-text-content').not('.derped').html(randomDerp);
+$('.comment-renderer-text-content').not('.derped').html(randomDerp);
 
 
 setInterval(function() {
   // only select un-derped elements
-  $('.Ct, .comment-text-content').not('.derped').html(randomDerp);
+  $('.comment-renderer-text-content').not('.derped').html(randomDerp);
 }, 100);
 
-console.log('Initializing!');
