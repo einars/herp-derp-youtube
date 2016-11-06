@@ -1,20 +1,12 @@
-This is the "Herp Derp for youtube" Chrome extension, vastly improved by smart herping-derping.
+This is the "Herp Derp for Youtube" Chrome extension, vastly improved by removing the phrase "herp derp."
 
 Original extension:
   http://www.tannr.com/herp-derp-youtube-comments/
   https://chrome.google.com/webstore/detail/herp-derp-for-youtube/ioomnmgjblnnolpdgdhebainmfbipjoh
 
-The extension converts all of the youtube comments to a gibberish, consisting of "herp" and "derp".
+The extension converts all of the youtube comments to gibberish, consisting of the word "blah." This version retains the approximate structure and length of the original text.
 
-This version retains the approximate structure and length of the original text.
-
-Examples:
-
-Original: "More crap in the industry."
-Herpaderped: "Derp herp herp the derp."
-
-Original: "the beat is rad"
-Herpaderped: "the herp is derp"
+I forked this repo because I wanted something to replace the content of Youtube comments (which are notoriously horrible). However, I did not want to use the phrase "herp derp" because it's flatly unfunny, makes me cringe a little bit inside, and most of all because it casually mocks folks with speech disorders and developmental disabilities. 
 
 ## Installation:
 
