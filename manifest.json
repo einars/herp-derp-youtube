@@ -3,16 +3,12 @@
    "name": "Herp Derp for YouTube™",
    "homepage_url": "http://www.tannr.com",
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "description": "Significantly improves YouTube comments by replacing them with random herps and derps.",
+   "description": "Significantly improves YouTube comments by replacing them with 'Blah blah blah'.",
    "version": "1.5.2",
    "content_scripts": [ {
       "all_frames": true,
-      "js": [ "jquery.min.js", "herp.js" ],
+      "js": [ "jquery.min.js", "blahifier.js" ],
       "matches": [ "https://apis.google.com/*", "https://plus.googleapis.com/*", "https://www.youtube.com/*" ],
       "run_at": "document_end"
-   } ],
-   "icons": {
-      "128": "herp128.png",
-      "48": "herp48.png"
-   }
+   } ]
 }
